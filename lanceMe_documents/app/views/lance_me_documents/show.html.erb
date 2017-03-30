@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @lance_me_document.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lance_me_document.description %>
+</p>
+
+<p>
+  <strong>File url:</strong>
+  <%= @lance_me_document.file_url %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @lance_me_document.image_url %>
+</p>
+
+<%= link_to 'Edit', edit_lance_me_document_path(@lance_me_document) %> |
+<%= link_to 'Back', lance_me_documents_path %>

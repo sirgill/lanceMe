@@ -1,0 +1,2 @@
+class LanceMeDocument < ApplicationRecord
+end

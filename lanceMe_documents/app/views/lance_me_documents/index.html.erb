@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lance Me Documents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>File url</th>
+      <th>Image url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lance_me_documents.each do |lance_me_document| %>
+      <tr>
+        <td><%= lance_me_document.title %></td>
+        <td><%= lance_me_document.description %></td>
+        <td><%= lance_me_document.file_url %></td>
+        <td><%= lance_me_document.image_url %></td>
+        <td><%= link_to 'Show', lance_me_document %></td>
+        <td><%= link_to 'Edit', edit_lance_me_document_path(lance_me_document) %></td>
+        <td><%= link_to 'Destroy', lance_me_document, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lance Me Document', new_lance_me_document_path %>
